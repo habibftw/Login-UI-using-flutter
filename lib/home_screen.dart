@@ -11,11 +11,11 @@ class HomeScreen extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("lib/images/background.png"),
-                  fit: BoxFit.cover)),
+                  fit: BoxFit.fill)),
         ),
         Container(
-          alignment: Alignment.topLeft,
-          margin: EdgeInsets.only(left: 50, top: 412),
+          alignment: Alignment.centerLeft,
+          margin: EdgeInsets.only(left: 50,top: 200),
           child: Image.asset(
             'lib/images/logo.png',
             height: 187,
@@ -23,8 +23,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(left: 225, top: 700, bottom: 10),
+            alignment: Alignment.bottomRight,
+            margin: EdgeInsets.only(right: 20,bottom: 20),
             child: SizedBox(
               width: 144,
               height: 60,

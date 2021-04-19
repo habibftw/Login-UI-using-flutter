@@ -11,11 +11,11 @@ class RegistrationScreen extends StatelessWidget {
         decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage("lib/images/background.png"),
-        fit: BoxFit.cover)),
+        fit: BoxFit.fill)),
     ),
               Container(
-                  alignment: Alignment.topLeft,
-                  margin: EdgeInsets.only(top: 730, left: 25),
+                  alignment: Alignment.bottomLeft,
+                  margin: EdgeInsets.only(bottom: 10, left: 25),
                   child: Row(
 
                     //crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,7 +29,7 @@ class RegistrationScreen extends StatelessWidget {
                       ),
                       TextButton(
                           onPressed: () {
-                            Navigator.pop(context);
+                            Navigator.pushNamed(context,'/login');
                           },
                           style: TextButton.styleFrom(padding: EdgeInsets.zero),
                           child: Text(
@@ -43,8 +43,8 @@ class RegistrationScreen extends StatelessWidget {
                     ],
                   )),
               Container(
-                  alignment: Alignment.topLeft,
-                  margin: EdgeInsets.only(left: 225, top: 700, bottom: 10),
+                  alignment: Alignment.bottomRight,
+                  margin: EdgeInsets.only(right: 20, bottom: 20),
                   child: SizedBox(
                     width: 144,
                     height: 60,
@@ -67,11 +67,13 @@ class RegistrationScreen extends StatelessWidget {
                     ),
                   )),
               Container(
-                alignment: Alignment.topLeft,
-                margin: EdgeInsets.only(left: 25, top: 340),
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.only(left: 25, right: 77),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Padding(padding: EdgeInsets.only(top: 150)),
                     Text(
                       'Register',
                       style: TextStyle(
@@ -88,7 +90,6 @@ class RegistrationScreen extends StatelessWidget {
                       padding: EdgeInsets.all(2.0),
                     ),
                     Container(
-                        width: 309,
                         height: 40,
                         child: TextField(
                           decoration: new InputDecoration(
@@ -111,7 +112,6 @@ class RegistrationScreen extends StatelessWidget {
                       padding: EdgeInsets.all(2.0),
                     ),
                     Container(
-                        width: 309,
                         height: 40,
                         child: TextField(
                           decoration: new InputDecoration(
@@ -134,7 +134,6 @@ class RegistrationScreen extends StatelessWidget {
                       padding: EdgeInsets.all(2.0),
                     ),
                     Container(
-                        width: 309,
                         height: 40,
                         child: TextField(
                           decoration: new InputDecoration(
@@ -147,19 +146,20 @@ class RegistrationScreen extends StatelessWidget {
                               hintStyle: new TextStyle(color: Colors.grey),
                               fillColor: Colors.white),
                         )),
+                    Container(
+                      alignment: Alignment.bottomLeft,
+                      margin: EdgeInsets.only(top: 20),
+                      child: Image.asset(
+                        'lib/images/Auth.png',
+                        height: 65,
+                        width: 187,
+                      ),
+                    )
                   ],
                 ),
               ),
 
-              Container(
-                alignment: Alignment.topLeft,
-                margin: EdgeInsets.only(left: 15, top: 620),
-                child: Image.asset(
-                  'lib/images/Auth.png',
-                  height: 65,
-                  width: 187,
-                ),
-              ),
+
     ]
     )
     );
