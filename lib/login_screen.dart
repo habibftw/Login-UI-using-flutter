@@ -27,10 +27,11 @@ class LoginScreen extends StatelessWidget {
                     fontSize: 16,
                   ),
                 ),
-                FlatButton(
+                TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/registration');
                     },
+                    style: TextButton.styleFrom(padding: EdgeInsets.only(left: 2)),
                     child: Text(
                       'Register',
                       style: TextStyle(
@@ -38,7 +39,8 @@ class LoginScreen extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
-                    )),
+                    )
+                ),
               ],
             )),
         Container(

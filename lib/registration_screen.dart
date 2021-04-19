@@ -27,10 +27,11 @@ class RegistrationScreen extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
-                      FlatButton(
+                      TextButton(
                           onPressed: () {
                             Navigator.pop(context);
                           },
+                          style: TextButton.styleFrom(padding: EdgeInsets.zero),
                           child: Text(
                             'Login',
                             style: TextStyle(
