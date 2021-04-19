@@ -51,7 +51,10 @@ flutter:
   assets:
     - lib/images/background.png
     - lib/images/logo.png
-    - lib/images/Auth.png
+    - lib/images/fb.png
+    - lib/images/apple.png
+    - lib/images/google.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
